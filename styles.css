@@ -1,0 +1,292 @@
+/* CSS for Three Star Media website */
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #222;
+    color: white;
+}
+
+nav {
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #c78c06;
+    text-decoration: none;
+}
+
+nav form {
+    margin-top: 20px;
+}
+
+nav form input[type="search"] {
+    width: 100%;
+    padding: 10px;
+}
+
+nav form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    color: #c78c06;
+    border: 1px solid #c78c06;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+#home {
+    background-image: url('../images/main-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    margin-bottom: 20px;
+}
+
+#home a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c78c06;
+    color: #222;
+    text-decoration: none;
+}
+
+/* About Section */
+#about {
+    background-color: #ffe6ac;
+    padding: 40px 20px;
+}
+
+/* Services Section */
+#services {
+    padding: 40px 20px;
+}
+
+.service {
+    background-color: #ffe6ac;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.service a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+}
+
+/* Vision Section */
+#vision {
+    background-image: url('../images/vision.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+#vision h2 {
+    color: #c78c06;
+}
+
+#vision a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+}
+
+/* Team Section */
+#team {
+    padding: 40px 20px;
+}
+
+.team-member {
+    margin-bottom: 40px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffe6ac;
+    padding: 40px 20px;
+}
+
+.contact-form form div {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: #c78c06;
+    border: none;
+}
+
+.location iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* Hours Table */
+.hours table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours th,
+.hours td {
+    border: 1px solid #222;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #c78c06;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #c78c06;
+}
+
+/* CSS Grid for Services Section */
+@media (min-width: 760px) {
+    #services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #services h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* CSS Flexbox for Navigation */
+@media (min-width: 760px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    nav form {
+        display: flex;
+        margin-top: 0;
+    }
+
+    nav form input[type="search"] {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    nav form button {
+        width: auto;
+        margin-top: 0;
+    }
+
+    /* Two-column layout for larger screens */
+    #about,
+    #team,
+    #contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #about > *,
+    .team-member,
+    .contact-form,
+    .location,
+    .hours {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 760px) {
+    body {
+        font-size: 18px;
+    }
+
+    #home {
+        padding: 100px 20px;
+    }
+
+    #home h1 {
+        font-size: 4em;
+    }
+
+    .service {
+        padding: 40px;
+    }
+
+    #vision {
+        padding: 100px 20px;
+    }
+}
+
